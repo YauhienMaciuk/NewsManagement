@@ -1,0 +1,190 @@
+<div id="allNews">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPage()"></div>
+	<div class="nextPage" data-i18n="content.nextPage" onclick="nextPage()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForAllNews();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsWithoutNextPage">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPage()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForAllNews();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsFirstPage">
+	<div class="novigation"></div>
+	<div class="nextPage" onclick="nextPage()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForAllNews();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsFirstPageWithoutNextPage">
+	<div class="novigation"></div>
+</div>
+
+
+<div id="allComments">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageComments()"></div>
+	<div class="nextPage" data-i18n="content.nextPage"
+		onclick="nextPageComments()"></div>
+</div>
+
+<div id="allCommentsWithoutNextPage">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageComments()"></div>
+</div>
+
+<div id="allCommentsFirstPage">
+	<div class="novigation"></div>
+	<div class="nextPage" onclick="nextPageComments()"></div>
+</div>
+
+<div id="allCommentsFirstPageWithoutNextPage">
+	<div class="novigation"></div>
+</div>
+
+
+<div id="allNewsByTop100CommentsFirstPage">
+	<div class="novigation"></div>
+	<div class="nextPage" onclick="nextPageByTop100Comments()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByComments();return false;">
+			<input type="number" class="numberPage" min="1" max="5" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsByTop100Comments">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageByTop100Comments()"></div>
+	<div class="nextPage" data-i18n="content.nextPage"
+		onclick="nextPageByTop100Comments()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByComments();return false;">
+			<input type="number" class="numberPage" min="1" max="5" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsByTop100CommentsWithoutNextPage">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageByTop100Comments()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByComments();return false;">
+			<input type="number" class="numberPage" min="1" max="5" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+
+<div id="allNewsByTagFirstPage">
+	<div class="novigation"></div>
+	<div class="nextPage" onclick="nextPageByTag()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByTag();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsByTag">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageByTag()"></div>
+	<div class="nextPage" data-i18n="content.nextPage"
+		onclick="nextPageByTag()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByTag();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsByTagWithoutNextPage">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageByTag()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByTag();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+
+<div id="allNewsByAuthorFirstPage">
+	<div class="novigation"></div>
+	<div class="nextPage" onclick="nextPageByAuthor()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByAuthor();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsByAuthor">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageByAuthor()"></div>
+	<div class="nextPage" data-i18n="content.nextPage"
+		onclick="nextPageByAuthor()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByAuthor();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+
+<div id="allNewsByAuthorWithoutNextPage">
+	<div class="novigation"></div>
+	<div class="prevPage" data-i18n="content.prevPage"
+		onclick="previousPageByAuthor()"></div>
+	<span class="titleSearchPage" data-i18n="menu.titleSearchPage"></span>
+	<div class="searchPage">
+		<form onsubmit="searchPageForNewsByAuthor();return false;">
+			<input type="number" class="numberPage" min="1" required> <input
+				type="submit" class="button5" data-i18n="[value]menu.search">
+		</form>
+	</div>
+</div>
+

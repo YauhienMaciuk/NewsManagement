@@ -1,0 +1,85 @@
+<div id="singleNews">
+	<p class="tag" data-i18n="content.tag"></p>
+	<div id="tags"></div>
+	<h3 class="title"></h3>
+	<h4 class="description"></h4>
+	<p class="fullText"></p>
+	<p class="author" data-i18n="content.author"></p>
+	<div id="authors"></div>
+	<p class="aboveTextareaComment"
+		data-i18n="content.aboveTextareaComment"></p>
+	<form class="formComment" onsubmit="addComment();return false;">
+		<textarea id="textareaComment" rows="7" cols="90" maxlength="300"
+			required></textarea>
+		<input type="hidden" id="idNewsForCreateComment"><input
+			type="submit" class=button2 data-i18n="[value]body.send">
+	</form>
+</div>
+
+<div id="news"></div>
+
+<div id="updateForm" align="right">
+	<p class="tag" data-i18n="content.tag" align="left"></p>
+	<div id="tags" align="left"></div>
+	<br>
+	<form class="form" onsubmit="updateNews();return false;">
+		<div class="formNews" align="right">
+			<label class="label-title" data-i18n="body.title"></label>
+			<textarea class="textarea" rows="3" cols="110" id="add-title"
+				maxlength="50" required></textarea>
+		</div>
+		<div class="formNews" align="right">
+			<label class="label-description" data-i18n="body.description"></label>
+			<textarea class="textarea" rows="7" cols="110" id="add-description"
+				maxlength="200" required></textarea>
+		</div>
+		<div class="formNews" align="right">
+			<label class="label-fullText" data-i18n="body.fullText"></label>
+			<textarea class="textarea" rows="20" cols="110" id="add-fullText"
+				maxlength="2000" required></textarea>
+		</div>
+		<p class="author" data-i18n="content.author" align="left"></p>
+		<div id="authors" align="left"></div>
+		<input type="hidden" id="idNews"> <input type="hidden"
+			id="creationTime">
+		<div class="formNews" align="center">
+			<table>
+				<tr>
+					<td><input type="submit" class=button1
+						data-i18n="[value]body.send"></td>
+					<td><input type="button" data-i18n="[value]body.cancel"
+						onclick="initPage()" class="button1"></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>
+<div id="formAddNews">
+	<form class="form" onsubmit="addNews();return false;">
+		<div class="formNews" align="right">
+			<label class="label-title" data-i18n="body.title"></label>
+			<textarea class="textarea" rows="3" cols="110" id="title"
+				maxlength="50" required></textarea>
+		</div>
+		<div class="formNews" align="right">
+			<label class="label-description" data-i18n="body.description"></label>
+			<textarea class="textarea" rows="7" cols="110" id="description"
+				maxlength="200" required></textarea>
+		</div>
+		<div class="formNews" align="right">
+			<label class="label-fullText" data-i18n="body.fullText"></label>
+			<textarea class="textarea" rows="20" cols="110" id="fullText"
+				maxlength="2000" required></textarea>
+		</div>
+		<div class="formNews" align="center">
+			<table>
+				<tr>
+					<td><input type="submit" data-i18n="[value]body.save"
+						class="button1"></td>
+					<td><input type="button" data-i18n="[value]body.cancel"
+						onclick="initPage()" class="button1"></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+</div>

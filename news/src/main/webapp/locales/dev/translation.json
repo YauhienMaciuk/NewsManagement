@@ -1,0 +1,62 @@
+{
+	"header": {
+	"back": "Back"
+	},
+	
+	"menu": {
+	"addNews": "Add News",
+	"delete": "Delete",
+	"listNews": "List News",
+	"editNews": "Edit",
+	"view": "View",
+	"create": "create",
+	"newTag": "new tag:",
+	"newAuthor": "new author:",
+	"byTop5Comments": "top 5",
+	"byTop20Comments": "top 20",
+	"byTop100Comments": "top 100",
+	"comments": "comments:",
+	"deleteTag": "delete tag",
+    "titleSearchPage": "page:",
+    "search": "search"	
+	},
+	
+	"body": {
+	"title": "Title:",
+	"description": "Description:",
+	"fullText": "Full text:",
+	"send": "Send",
+	"save": "Save",
+	"cancel": "Cancel"
+	},
+	
+	"content": {
+	"prevPage": "prev",
+	"nextPage": "next",
+	"tag": "Tags:",
+	"author": "Authors:",
+	"aboveTextareaComment": "write a comment:",
+	"comment" : "show all comments"
+	},
+	
+	"lang": {
+	"ru": "ru",
+	"en": "en"
+	},
+	
+	"confirm": {
+	"deleteNews": "Do you want delete this news?",
+	"createdTag": "You created the new tag",
+	"createdAuthor": "You created the new author",
+	"updateNews": "Do you want update this news?",
+	"deleteComment": "Do you want delete this comment?"
+	},
+	
+	"info": {
+	"notFound": "The page is not found"
+	},
+	
+	"error": {
+	"listNews": "Sorry"
+	}
+}

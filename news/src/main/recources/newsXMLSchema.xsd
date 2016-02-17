@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema"
+	xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+	<element name="newsRoot">
+		<complexType>
+			<sequence>
+				<element ref="tns:news" minOccurs="1" maxOccurs="unbounded" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="news" type="tns:news" />
+	<element name="author" type="tns:author" />
+	<element name="tag" type="tns:tag" />
+	<complexType name="news">
+		<sequence>
+			<element name="title">
+				<simpleType>
+					<restriction base="string">
+						<minLength value="1" />
+						<maxLength value="50" />
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="description">
+				<simpleType>
+					<restriction base="string">
+						<minLength value="1" />
+						<maxLength value="200" />
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="fullText">
+				<simpleType>
+					<restriction base="string">
+						<minLength value="1" />
+						<maxLength value="2000" />
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="listAuthors">
+				<complexType>
+					<sequence>
+						<element ref="tns:author" minOccurs="1" maxOccurs="3" />
+					</sequence>
+				</complexType>
+			</element>
+			<element name="listTags">
+				<complexType>
+					<sequence>
+						<element ref="tns:tag" minOccurs="1" maxOccurs="unbounded" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="author">
+		<all>
+			<element name="id" type="long" />
+			<element name="name">
+				<simpleType>
+					<restriction base="string">
+						<minLength value="1" />
+						<maxLength value="20" />
+					</restriction>
+				</simpleType>
+			</element>
+		</all>
+	</complexType>
+	<complexType name="tag">
+		<sequence>
+			<element name="name">
+				<simpleType>
+					<restriction base="string">
+						<minLength value="1" />
+						<maxLength value="20" />
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

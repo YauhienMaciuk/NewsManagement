@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:task="http://www.springframework.org/schema/task"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+						http://www.springframework.org/schema/mvc/spring-mvc.xsd
+						http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/task
+						http://www.springframework.org/schema/task/spring-task.xsd
+						http://www.springframework.org/schema/tx
+						http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<context:component-scan base-package="com.epam.lab.news" />
+
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<context:property-placeholder location="classpath:/database.properties"  order="1" ignore-unresolvable="true" />
+	<context:property-placeholder location="classpath:/taskExecuter.properties"  order="2" ignore-unresolvable="true" />
+
+	<bean id="validationMessageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:message" />
+	</bean>
+
+	<bean name="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource">
+			<ref bean="validationMessageSource" />
+		</property>
+	</bean>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean>
+
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="language"></property>
+		</bean>
+	</mvc:interceptors>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="/WEB-INF/messages/message" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<bean
+		class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driverClassName}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${user}" />
+		<property name="password" value="${password}" />
+		<property name="maxActive" value="${maxActive}"></property>
+		<property name="maxWait" value="${maxWait}"></property>
+	</bean>
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceXmlLocation" value="classpath:/META-INF/persistence.xml" />
+		<property name="packagesToScan" value="com.epam.lab.news" />
+		<property name="persistenceUnitName" value="entityManager" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="persistenceProviderClass"
+			value="org.hibernate.jpa.HibernatePersistenceProvider"></property>
+	</bean>
+	
+	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="${corePoolSize}" />
+		<property name="maxPoolSize" value="${maxPoolSize}" />
+		<property name="waitForTasksToCompleteOnShutdown" value="true" />
+	</bean> 
+
+ 	<task:annotation-driven scheduler="scheduler" />
+	<task:scheduler 
+		id="scheduler" pool-size="1" /> 
+
+	<mvc:annotation-driven validator="validator">
+		<mvc:message-converters>
+			<bean
+				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper">
+					<bean class="com.epam.lab.news.config.HibernateAwareObjectMapper" />
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+</beans>

@@ -1,0 +1,287 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: Verdana;
+	margin: 0;
+}
+
+header {
+	background: #858cbc;
+	color: #fff;
+	position: fixed;
+	bottom: 95%;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+.menu {
+	background-color: #97E8FF;
+	position: fixed;
+	top: 5%;
+	bottom: 5%;
+	overflow: auto;
+	right: 85%;
+	left: 0;
+	padding: 7px;
+}
+
+.content {
+	background-color: rgba(247, 251, 9, 0.53);
+	position: fixed;
+	top: 5%;
+	bottom: 5%;
+	overflow: auto;
+	right: 0;
+	left: 15%;
+	padding: 7px;
+}
+
+footer {
+	background-color: #858cbc;
+	position: fixed;
+	top: 95%;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+.button1 {
+	width: 100px;
+	height: 30px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BFFF),
+		to(#EBFFFF));
+	border-radius: 12px;
+}
+
+.button2 {
+	width: 100px;
+	height: 30px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BFFF),
+		to(#EBFFFF));
+	border-radius: 12px;
+	margin-left: 445px;
+}
+
+.button3 {
+	width: 100px;
+	hight: 30px;
+	border-radius: 12px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#F7FB09),
+		to(#F6F7F4));
+}
+
+.button4 {
+	width: 250px;
+	hight: 30px;
+	border-radius: 12px;
+}
+
+.button5 {
+	width: 100px;
+	hight: 30px;
+	border-radius: 12px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#04FF00),
+		to(#EBFFFD));
+}
+
+#tb {
+	align: "right";
+}
+
+.textarea {
+	margin: 10px 120px 5px 100px;
+}
+
+.label-description {
+	margin-right: 900px;
+}
+
+.label-title {
+	margin-right: 900px;
+}
+
+.label-fullText {
+	margin-right: 900px;
+}
+
+#back {
+	float: left;
+	top: 5px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+#ru {
+	float: right;
+	top: 5px;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+#en {
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.listNews-edit {
+	color: rgb(23, 126, 234);
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+.listNews-view {
+	color: rgb(23, 126, 234);
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+.listNews-delete {
+	color: rgb(23, 126, 234);
+	margin-right: 10px;
+	text-decoration: underline;
+}
+
+.add {
+	text-decoration: underline;
+}
+
+.menu-editNews {
+	text-decoration: underline;
+}
+
+.menu-singleNews {
+	text-decoration: underline;
+}
+
+.menu-listComments {
+	text-decoration: underline;
+}
+
+.menu-formAddNews {
+	text-decoration: underline;
+}
+
+.fullText {
+	overflow-wrap: break-word;
+}
+
+.description {
+	overflow-wrap: break-word;
+}
+
+.comment {
+	overflow-wrap: break-word;
+	margin: 20px;
+}
+
+.novigation {
+	position: fixed;
+	margin-left: 39%;
+	top: 91%;
+}
+
+.prevPage {
+	position: fixed;
+	top: 91%;
+	margin-left: 34%;
+}
+
+.nextPage {
+	position: fixed;
+	top: 91%;
+	margin-left: 42%;
+}
+
+.searchPage {
+	position: fixed;
+	top: 91%;
+	margin-left: 62%;
+}
+
+.titleSearchPage {
+	position: fixed;
+	top: 91%;
+	margin-left: 55%;
+}
+
+#createTag {
+	width: 150px;
+	border-radius: 8px;
+	font-family: inherit;
+	background-color: rgba(221, 243, 241, 0.53);
+}
+
+#createAuthor {
+	width: 150px;
+	border-radius: 8px;
+	font-family: inherit;
+	background-color: rgba(221, 243, 241, 0.53);
+}
+
+.numberPage {
+	width: 60px;
+	border-radius: 8px;
+	font-family: inherit;
+	background-color: rgba(221, 243, 241, 0.53);
+	color: red;
+	font-family: inherit;
+}
+
+.tags-view {
+	width: 270px;
+	padding: 24px 0 0;
+	color: #8c8c8c;
+	font-size: 11px;
+}
+
+.tags {
+	width: 160px;
+	height: 200px;
+	background: #CEF0F5;
+	border: 1px solid #C1BEEC;
+	overflow-y: scroll;
+}
+
+.authors {
+	width: 160px;
+	height: 200px;
+	background: #CEF0F5;
+	border: 1px solid #C1BEEC;
+	overflow-y: scroll;
+}
+
+#textareaComment {
+	margin: 10px 165px;
+}
+
+.aboveTextareaComment {
+	margin-left: 100px;
+	line-hight: 0;
+}
+
+.showAllComments {
+	margin-left: 375px;
+}
+
+.listNews {
+	margin: 20px;
+}
+
+#singleNews {
+	margin: 20px;
+}
+
+.forDeleteComment {
+	float: right;
+	color: red;
+	text-decoration: underline;
+}
+
+.newsManagement {
+	margin-left: 120px;
+}
